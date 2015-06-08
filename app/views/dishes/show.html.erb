@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dish.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @dish.price %>
+</p>
+
+<p>
+  <strong>In stock:</strong>
+  <%= @dish.in_stock %>
+</p>
+
+<p> 
+<p>
+  <% @ingredients.each do |ingredient| %>
+  	<ul>
+    	<li><%= ingredient.name %></li>
+    </ul>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_dish_path(@dish) %> |
+<%= link_to 'Back', dishes_path %>
